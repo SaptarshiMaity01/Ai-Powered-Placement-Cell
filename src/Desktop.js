@@ -1,10 +1,11 @@
-import Navheader from "src/components/Navheader";
-import FrameComponent from "src/components/FrameComponent";
-import RectangleComponent from "src/components/RectangleComponent";
-import FrameComponent1 from "src/components/FrameComponent1";
-import UnlockPotentialInnerContent from "src/components/UnlockPotentialInnerContent";
-import FrameComponent2 from "src/components/FrameComponent2";
-import Footer from "src/components/Footer";
+import React from 'react';
+import Navheader from './components/Navheader';
+import Footer from './components/Footer';
+import FrameComponent from './components/FrameComponent';
+import RectangleComponent from "./components/RectangleComponent";
+import FrameComponent1 from "./components/frameComponent1";
+import UnlockPotentialInnerContent from "./components/UnlockPotentialInnerContent";
+import FrameComponent2 from "./components/FrameComponent2";
 
 const Desktop = () => {
   return (
