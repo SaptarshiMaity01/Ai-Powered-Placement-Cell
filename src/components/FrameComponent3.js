@@ -13,7 +13,7 @@ const FrameComponent3 = ({ className = "", frame7, propFlex, propWidth }) => {
   return (
     <Button
       className={`h-20 flex-1 ${className}`}
-      endIcon={<img width="16px" height="24px" src="/arrow-1.svg" />}
+      endIcon={<img width="16px" height="24px" src="/images/Arrow2.png" alt="Arrow Icon" />}
       disableElevation
       variant="contained"
       sx={{
