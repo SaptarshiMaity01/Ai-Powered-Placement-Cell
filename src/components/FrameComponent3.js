@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Button } from "@mui/material";
 import PropTypes from "prop-types";
-import Arrow2 from "/images/Arrow2.png";
+import Arrow2 from '../images/Arrow2.png'; 
 
 const FrameComponent3 = ({ className = "", frame7, propFlex, propWidth }) => {
   const frameButtonStyle = useMemo(() => {

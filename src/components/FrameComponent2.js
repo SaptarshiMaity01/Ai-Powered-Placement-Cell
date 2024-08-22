@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import images from '../images';
 
 const FrameComponent2 = ({ className = "" }) => {
   return (
@@ -29,8 +30,8 @@ const FrameComponent2 = ({ className = "" }) => {
                     <img
                       className="absolute top-[26px] left-[42px] w-[91px] h-[88px] object-cover"
                       loading="lazy"
-                      alt=""
-                      src="/image-10@2x.png"
+                      alt="Icon"
+                      src={images.image3}
                     />
                   </div>
                 </div>
