@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Button } from "@mui/material";
 import PropTypes from "prop-types";
+import Arrow2 from "/images/Arrow2.png";
 
 const FrameComponent3 = ({ className = "", frame7, propFlex, propWidth }) => {
   const frameButtonStyle = useMemo(() => {
@@ -13,7 +14,7 @@ const FrameComponent3 = ({ className = "", frame7, propFlex, propWidth }) => {
   return (
     <Button
       className={`h-20 flex-1 ${className}`}
-      endIcon={<img width="16px" height="24px" src="/images/Arrow2.png" alt="Arrow Icon" />}
+      endIcon={<img width="16px" height="24px" src={Arrow2} alt="Arrow Icon" />}
       disableElevation
       variant="contained"
       sx={{
