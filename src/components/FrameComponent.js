@@ -4,16 +4,11 @@ import PropTypes from "prop-types";
 const FrameComponent = ({ className = "" }) => {
   return (
     <section
-      className={`[background:radial-gradient(50%_50%_at_50%_50%,_#caf0f8,_#70d5ea_31.5%,_#00b4d8_63.39%,_#0077b6_91%)] overflow-hidden flex flex-col items-start justify-start pt-[93px] px-0 pb-[101px] box-border gap-[162px] max-w-full text-left text-9xl text-white font-roboto-serif mq450:gap-10 mq450:pt-[39px] mq450:pb-[43px] mq450:box-border mq750:gap-[81px] mq1050:pt-[60px] mq1050:pb-[66px] mq1050:box-border ${className}`}
+      className={`h-full w-full bg-gradient-to-b from-[#caf0f8] via-[#70d5ea] to-[#0077b6] overflow-hidden flex flex-col items-start justify-start pt-[93px] px-0 pb-[101px] box-border gap-[162px] max-w-full text-left text-9xl text-white font-roboto-serif mq450:gap-10 mq450:pt-[39px] mq450:pb-[43px] mq450:box-border mq750:gap-[81px] mq1050:pt-[60px] mq1050:pb-[66px] mq1050:box-border ${className}`}
     >
-      <div className="w-[751px] flex flex-col items-start justify-start py-0 pl-0 pr-5 box-border gap-[54px] max-w-full mq750:gap-[27px]">
+      {/* Content container with max-width and centered */}
+      <div className="w-full max-w-[1440px] mx-auto flex flex-col items-start justify-start py-0 pl-0 pr-5 box-border gap-[54px] mq750:gap-[27px]">
         <div className="self-stretch flex flex-col items-start justify-start gap-[26.6px] max-w-full">
-          <img
-            className="w-[681.4px] h-[239.4px] object-contain max-w-full"
-            loading="lazy"
-            alt=""
-            src="/body@2x.png"
-          />
           <div className="self-stretch flex flex-row items-start justify-end max-w-full">
             <h2 className="m-0 h-7 w-[681px] relative text-inherit font-normal font-[inherit] inline-block max-w-full mq450:text-3xl">
               Empowering Futures, Connecting Talent to Opportunity
