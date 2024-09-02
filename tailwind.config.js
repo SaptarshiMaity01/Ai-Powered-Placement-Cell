@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -16,7 +17,15 @@ module.exports = {
       borderRadius: {
         "6xl": "25px",
       },
+      fontSize: {
+        // Custom font sizes added here
+        "96xl": "96px",
+        "80xl": "80px",
+        "64xl": "64px",
+        "48xl": "48px",
+      },
     },
+    
     fontSize: {
       mini: "15px",
       base: "16px",

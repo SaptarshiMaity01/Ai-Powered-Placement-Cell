@@ -20,7 +20,7 @@ const FrameComponent3 = ({ className = "", frame7, propFlex, propWidth }) => {
       sx={{
         textTransform: "none",
         color: "#fff",
-        fontSize: "32",
+        fontSize: "36",
         background: "#000",
         borderRadius: "40px",
         "&:hover": { background: "#000" },
