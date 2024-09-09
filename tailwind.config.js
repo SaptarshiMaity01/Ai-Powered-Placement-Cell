@@ -1,21 +1,41 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: 'class',
+  
   theme: {
     extend: {
       colors: {
         white: "#fff",
         black: "#000",
         gray: "#808080",
+        "base-white": "#fff",
+        gray1: "#808080",
+        lightgray: "#d0d5dd",
+        "neutral-800": "#191d23",
+        "neutral-600": "#4b5768",
+        "base-02": "#090914",
+        royalblue: "#2563eb",
+        "blue-gray-400": "#94a3b8",
+        "gray-200": "#e4e4e7",
+        "gray-600": "#52525b",
+        deepskyblue: "#00b4d8",
+        "error-red-600": "#dc2626",
+        "error-red-500": "#ef4444",
+        "neutral-500": "#64748b",
       },
       spacing: {},
       fontFamily: {
         "roboto-serif": "'Roboto Serif'",
         inter: "Inter",
+        manrope: "Manrope",
+        "regular-13": "Poppins",
+        "open-sans": "'Open Sans'",
       },
       borderRadius: {
         "6xl": "25px",
+        xl: "20px",
+        "8xs": "5px",
+        "4xs": "9px",
       },
       fontSize: {
         // Custom font sizes added here

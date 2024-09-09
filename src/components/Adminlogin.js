@@ -3,7 +3,6 @@ import { Button } from "@mui/material";
 import PropTypes from "prop-types";
 
 const AdminLogin = ({
-  className = "",
   adminLoginPosition,
   title,
   titleTextDecoration,
@@ -27,24 +26,24 @@ const AdminLogin = ({
 
   return (
     <form
-      className={`m-0 w-[428px] rounded bg-shades-white max-w-full flex flex-col items-start justify-start pt-[30px] px-6 pb-[61px] box-border gap-6 leading-[normal] tracking-[normal] ${className}`}
+      className="m-0 w-full relative rounded bg-base-white flex flex-col items-start justify-start pt-[30px] px-6 pb-[61px] box-border gap-6 leading-[normal] tracking-[normal]"
       style={adminLoginStyle}
     >
       <div className="w-[369px] flex flex-row items-start justify-start pt-0 px-0 pb-1.5 box-border max-w-full">
-        <a href="/" className="[text-decoration:none] h-[22px] flex-1 relative text-base font-extrabold font-open-sans text-transparent !bg-clip-text [background:linear-gradient(-88.11deg,_#00b4d8,_#70d5ea)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] text-left inline-block overflow-hidden text-ellipsis whitespace-nowrap max-w-full">{`T&P Nexus`}</a>
+        <a className="[text-decoration:none] h-[22px] flex-1 relative text-base font-extrabold font-open-sans text-transparent !bg-clip-text [background:linear-gradient(-88.11deg,_#00b4d8,_#70d5ea)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] text-left inline-block overflow-hidden text-ellipsis whitespace-nowrap max-w-full"href=" ">{`T&P Nexus`}</a>
       </div>
       <div className="self-stretch flex flex-col items-start justify-start gap-2">
-        <a href="/"
-          className="[text-decoration:none] self-stretch relative text-3xl font-bold font-manrope text-neutral-800 text-left"
+        <h3
+          className="m-0 self-stretch relative text-3xl font-bold font-manrope text-neutral-800 text-left"
           style={titleStyle}
         >
           {title}
-        </a>
+        </h3>
         <div className="self-stretch relative text-sm font-manrope text-neutral-500 text-left">
           Welcome back. Enter your credentials to access your account
         </div>
       </div>
-      <div className="self-stretch h-[63px] flex flex-col items-start justify-start gap-1 mq157:h-auto">
+      <div className="self-stretch h-[63px] flex flex-col items-start justify-start gap-1 mq450:h-auto">
         <div className="self-stretch h-[19px] relative text-sm font-semibold font-manrope text-neutral-800 text-left inline-block overflow-hidden text-ellipsis whitespace-nowrap shrink-0">
           Email Address
         </div>
@@ -61,7 +60,7 @@ const AdminLogin = ({
       </div>
       <section className="self-stretch flex flex-col items-start justify-start gap-1 max-w-full">
         <div className="self-stretch flex flex-col items-start justify-start gap-1 max-w-full">
-          <div className="self-stretch flex flex-row items-center justify-between gap-5 mq380:flex-wrap">
+          <div className="self-stretch flex flex-row items-center justify-between gap-5 mq750:flex-wrap">
             <div className="h-[19px] w-[215px] relative text-sm font-semibold font-manrope text-neutral-800 text-left inline-block overflow-hidden text-ellipsis whitespace-nowrap shrink-0">
               Password
             </div>
@@ -89,7 +88,7 @@ const AdminLogin = ({
         </div>
       </div>
       <Button
-        className="self-stretch h-11 mq400:pl-5 mq400:pr-5 mq400:box-border"
+        className="self-stretch h-11 mq1050:pl-5 mq1050:pr-5 mq1050:box-border"
         disableElevation
         variant="contained"
         sx={{
@@ -108,7 +107,7 @@ const AdminLogin = ({
         <div className="self-stretch flex flex-row items-start justify-center py-0 px-5">
           <div className="w-28 flex flex-row items-start justify-start relative">
             <div className="h-px w-[281px] absolute !m-[0] bottom-[16px] left-[calc(50%_-_140px)] border-neutral-600 border-t-[1px] border-solid box-border" />
-            <div className="h-[35px] flex-1 bg-shades-white flex flex-row items-start justify-start p-2 box-border whitespace-nowrap z-[1]">
+            <div className="h-[35px] flex-1 bg-base-white flex flex-row items-start justify-start p-2 box-border whitespace-nowrap z-[1]">
               <div className="self-stretch flex-1 relative text-sm font-medium font-manrope text-neutral-600 text-left overflow-hidden text-ellipsis whitespace-nowrap">
                 or sign up with
               </div>
@@ -136,7 +135,7 @@ const AdminLogin = ({
           </div>
           <Button
             className="h-8 flex-1 min-w-[81px]"
-            startIcon={<img width="16px" height="16px" src="/path14.svg" alt=""/>}
+            startIcon={<img width="16px" height="16px" src="/path14.svg" alt=" "/>}
             disableElevation
             variant="outlined"
             sx={{
@@ -162,7 +161,6 @@ const AdminLogin = ({
 };
 
 AdminLogin.propTypes = {
-  className: PropTypes.string,
   title: PropTypes.string,
   icons: PropTypes.string,
   logoGoogleg48dp: PropTypes.string,
@@ -174,4 +172,4 @@ AdminLogin.propTypes = {
   titleMargin: PropTypes.any,
 };
 
-export default AdminLogin;
+export default AdminLogin;;

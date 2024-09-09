@@ -51,7 +51,7 @@ const Navheader = ({ className = "" }) => {
           </div>
           <div className="flex flex-col items-start justify-start pt-[11px] pb-0 pl-0 pr-1">
             <Link
-              to="/register"
+              to="/Form"
               className="[text-decoration:none] relative text-[inherit] inline-block min-w-[85px]"
             >
               Register
