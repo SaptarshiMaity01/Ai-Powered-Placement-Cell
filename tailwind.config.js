@@ -1,18 +1,38 @@
-/** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  
+  darkMode: ["class"],
+  content: [
+    "./ResumeBuilder/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./pages/**/*.{js,jsx,ts,tsx}",
+  ],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1400px",
+      },
+    },
     extend: {
       colors: {
         white: "#fff",
         black: "#000",
         gray: "#808080",
+        lightgray: "#d0d5dd",
         "base-white": "#fff",
         gray1: "#808080",
-        lightgray: "#d0d5dd",
         "neutral-800": "#191d23",
         "neutral-600": "#4b5768",
+        "neutral-500": "#64748b",
         "base-02": "#090914",
         royalblue: "#2563eb",
         "blue-gray-400": "#94a3b8",
@@ -21,66 +41,141 @@ module.exports = {
         deepskyblue: "#00b4d8",
         "error-red-600": "#dc2626",
         "error-red-500": "#ef4444",
-        "neutral-500": "#64748b",
+
+        // CSS variables using HSL
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
+        linkedin: {
+          blue: "#0A66C2",
+          light: "#E6F7FF",
+          bg: "#f3f2f0",
+        },
+        resume: {
+          primary: "#1a365d",
+          secondary: "#2c5282",
+          accent: "#319795",
+          light: "#f7fafc",
+          dark: "#2d3748",
+        },
       },
-      spacing: {},
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+        xl: "20px",
+        "6xl": "25px",
+        "4xs": "9px",
+        "8xs": "5px",
+      },
+      fontSize: {
+        base: "16px",
+        mini: "15px",
+        lgi: "19px",
+        xl: "20px",
+        "3xl": "22px",
+        "5xl": "24px",
+        "7xl": "26px",
+        "9xl": "28px",
+        "10xl": "29px",
+        "13xl": "32px",
+        "19xl": "38px",
+        "20xl": "39px",
+        "21xl": "40px",
+        "29xl": "48px",
+        "33xl": "52px",
+        "46xl": "65px",
+        "48xl": "48px",
+        "64xl": "64px",
+        "80xl": "80px",
+        "96xl": "96px",
+        inherit: "inherit",
+      },
       fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        display: ["Poppins", "sans-serif"],
         "roboto-serif": "'Roboto Serif'",
         inter: "Inter",
         manrope: "Manrope",
         "regular-13": "Poppins",
         "open-sans": "'Open Sans'",
       },
-      borderRadius: {
-        "6xl": "25px",
-        xl: "20px",
-        "8xs": "5px",
-        "4xs": "9px",
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in": {
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
       },
-      fontSize: {
-        // Custom font sizes added here
-        "96xl": "96px",
-        "80xl": "80px",
-        "64xl": "64px",
-        "48xl": "48px",
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.5s ease-out",
+        "slide-in": "slide-in 0.5s ease-out",
       },
-    },
-    
-    fontSize: {
-      mini: "15px",
-      base: "16px",
-      "5xl": "24px",
-      lgi: "19px",
-      "13xl": "32px",
-      "7xl": "26px",
-      "29xl": "48px",
-      "10xl": "29px",
-      "19xl": "38px",
-      "46xl": "65px",
-      "20xl": "39px",
-      "33xl": "52px",
-      "21xl": "40px",
-      xl: "20px",
-      "9xl": "28px",
-      "3xl": "22px",
-      inherit: "inherit",
+      perspective: {
+        "1000": "1000px",
+      },
     },
     screens: {
-      lg: {
-        max: "1200px",
-      },
-      mq1050: {
-        raw: "screen and (max-width: 1050px)",
-      },
-      mq750: {
-        raw: "screen and (max-width: 750px)",
-      },
-      mq450: {
-        raw: "screen and (max-width: 450px)",
-      },
+      lg: { max: "1200px" },
+      mq1050: { raw: "screen and (max-width: 1050px)" },
+      mq750: { raw: "screen and (max-width: 750px)" },
+      mq450: { raw: "screen and (max-width: 450px)" },
     },
   },
-  corePlugins: {
-    preflight: false,
-  },
+  corePlugins: {},
+  plugins: [require("tailwindcss-animate"), plugin()],
 };

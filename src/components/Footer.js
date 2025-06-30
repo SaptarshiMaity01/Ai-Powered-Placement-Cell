@@ -1,69 +1,91 @@
-import PropTypes from "prop-types";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-const Footer = ({ className = "" }) => {
+const Footer = () => {
+  const navigate = useNavigate();
+  
+  const [showLoginOptions, setShowLoginOptions] = useState(false);
+  const [showRegisterOptions, setShowRegisterOptions] = useState(false);
+
+  const handleLinkClick = (path) => {
+    navigate(path, { replace: true });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
-    <footer
-      className={`w-full flex flex-col py-0 px-[50px] pt-[20px] box-border max-w-full text-left text-base text-black font-roboto-serif lg:flex-wrap  ${className}`}
-    >
-       
-      <div className="w-full flex flex-row items-start justify-between">
-      <div className="self-stretch flex flex-col items-start justify-start gap-8 pb-[80px]">
-          <h3 className="m-0 relative text-inherit font-medium">T&P Nexus</h3>
-          <div className="ml-[-4px] flex flex-col items-start justify-start gap-[19px] text-base">
-            <div className="relative font-medium inline-block">Home</div>
-            <div className="relative font-medium inline-block">Services</div>
-            <div className="relative font-medium inline-block">Login</div>
-            <div className="relative font-medium inline-block">Register</div>
-            <div className="relative font-medium inline-block">About Us</div>
-            <div className="relative font-medium inline-block">Contact Us</div>
-            <div className="relative font-medium inline-block">FAQ</div>
-          </div>
-        </div>
-        <div className="w-auto flex flex-col items-start justify-start gap-[50px] text-base">
-          <div className="self-stretch flex flex-col items-start justify-start gap-8">
-            <div className="relative font-medium inline-block">HEAD OFFICE</div>
-            <div className="relative font-medium">
-              <p className="m-0">500 Terry Francine St,</p>
-              <p className="m-0">San Francisco, CA 94158</p>
-            </div>
-          </div>
-          <div className="relative font-medium">
-            <p className="m-0">123-456-7890</p>
-            <p className="m-0">info@mysite.com</p>
-          </div>
-        </div>
+    <div className="flex flex-col h-full justify-between bg-[#030a1c] text-[#8198B0] border-t border-slate-600 mt-12">
+      <div className="flex flex-row md:flex-row justify-between p-8 mq750:flex-col">
+        <div className="mb-8 md:mb-0">
+          <h1 className="text-xl font-bold mb-4">Business Name</h1>
+          <ul className="space-y-2 cursor-pointer">
+            <li onClick={() => handleLinkClick("/")}>HOME</li>
 
-        <div className="w-auto flex flex-col items-start justify-start pt-0.5 pb-0 box-border">
-          <div className="flex flex-col items-start justify-start gap-[50px]">
-            <div className="relative font-medium inline-block">SOCIALS</div>
-            <div className="flex flex-col items-start justify-start gap-[30px]">
-              <div className="relative font-medium inline-block">Facebook</div>
-              <div className="relative font-medium inline-block">Instagram</div>
-              <div className="relative font-medium inline-block">LinkedIn</div>
-            </div>
-          </div>
-        </div>
-        <div className="w-auto flex flex-col items-start justify-start pt-0.5 pb-0 box-border">
-        <div className="flex flex-col items-start justify-start gap-[50px]">
-          <div className="relative font-medium inline-block">INQUIRIES</div>
-        </div>
-      </div>
-      </div>
+            {/* Login dropdown */}
+            <li onClick={() => handleLinkClick("/SignUp")}>Register</li>
+            <li onClick={() => handleLinkClick("/SignIn")}>Login</li>
 
-      {/* Footer Bottom Section */}
-      <div className="w-full mt-10 flex flex-row justify-between items-center px-0 pb-4 text-mini">
-        <div className="flex flex-row space-x-5">
-          <div className="relative font-medium">Privacy Policy</div>
-          <div className="relative font-medium">Accessibility Statement</div>
+            <li onClick={() => handleLinkClick("/Read")}>ABOUT US</li>
+            <li onClick={() => handleLinkClick("/ContactUs")}>CONTACT US</li>
+          </ul>
         </div>
-        <div className="relative font-medium">© 2035 by T&P Nexus</div>
+        <div className="mb-8 md:mb-0">
+          <h2 className="text-lg font-bold mb-4">HEAD OFFICE</h2>
+          <p>
+          Anjaneri ,Trimbak Road, 
+            <br />
+            Nashik-422213.
+          </p>
+          <p className="mt-4">
+            123-456-7890
+            <br />
+            bvcoe@gmail.com
+          </p>
+        </div>
+        <div className="mb-8 md:mb-0">
+          <h2 className="text-lg font-bold mb-4">SOCIALS</h2>
+          <ul className="space-y-2">
+            <li>
+              <a href="https://www.facebook.com/" className="text-blue-600">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/accounts/login/?hl=en" className="text-blue-600">
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://in.linkedin.com/" className="text-blue-600">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-lg font-bold mb-4">INQUIRIES</h2>
+          
+          <p className="mt-4">
+            <Link to="/ContactUs" className="text-blue-600">
+              Work with us
+            </Link>
+          </p>
+        </div>
       </div>
-    </footer>
+      <div className="border-t text-[#8198B0]  border-slate-600 py-4 text-center text-sm">
+        <a href="https://in.linkedin.com/" className=" mr-4">
+          Privacy Policy
+        </a>
+        <a href="https://in.linkedin.com/" >
+          Accessibility Statement
+        </a>
+        <p className="mt-4 ">
+          © 2035 {""}
+          <a href="https://in.linkedin.com/" className="text-blue-600">
+            T&P NEXUS
+          </a>
+        </p>
+      </div>
+    </div>
   );
 };
-
-Footer.propTypes = {
-  className: PropTypes.string,
-};
-
 export default Footer;
