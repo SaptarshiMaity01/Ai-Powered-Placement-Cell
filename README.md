@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is only the Front-end Part For Backend Check the repo Ai-Powered-Placement-Cell-Backend
 
 ## Available Scripts
 
