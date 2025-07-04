@@ -1,45 +1,123 @@
-# Getting Started with Create React App
+# 🎓 Placement Portal – AI Powered Placement Cell Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-This is only the Front-end Part For Backend Check the repo Ai-Powered-Placement-Cell-Backend
+![Placement Portal Banner]![1](https://github.com/user-attachments/assets/eb39db7d-4669-4137-9230-22914054445e)
 
-## Available Scripts
 
-In the project directory, you can run:
+An all-in-one AI-powered web application that simplifies the placement process for **students**, **recruiters**, and **TPOs/Admins**. Streamline job applications, interview preparation, and recruitment activities on a single centralized platform.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📚 Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+  - [For Students](#-for-students)
+  - [For Recruiters](#-for-recruiters)
+  - [For TPOs/Admins](#-for-tposadmins)
+- [Technical Stack](#-technical-stack)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [Usage](#-usage)
+- [Screenshots](#-screenshots)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Overview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The **Placement Portal** is designed to assist students in preparing for and navigating the job placement process while helping recruiters and TPOs manage the end-to-end recruitment pipeline efficiently. Powered by AI, it offers resume analysis, interview question feedback, skill assessments, and more.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Key Features
 
-### `npm run eject`
+### 👩‍🎓 For Students
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 🔍 **Job Search**: Explore and apply for opportunities from top companies
+- 🤖 **AI Career Chatbot**: Personalized guidance for careers and interviews
+- 📄 **Resume Builder & Parser**: Upload, analyze, and enhance your resume
+- 🎤 **Interview Preparation**: Get feedback on answers and interview tips
+- 💬 **Messaging System**: Chat with recruiters and placement officers and other students
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🏢 For Recruiters
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- 📢 **Job Posting**: Post and manage job listings with custom filters
+- 📂 **Applicant Tracking**: View and manage candidates efficiently
+- 🔎 **Candidate Search**: Filter candidates by skills and experience
+- 📊 **Company Dashboard**: Central hub to manage all recruitment activity
 
+---
+
+### 🎓 For TPOs/Admins
+
+- 👥 **Student Management**: Monitor student profiles and placement status
+- 🏢 **Recruiter Management**: Oversee recruiter activity and job postings
+- 📌 **Job Management**: Supervise postings and application flow
+- 📈 **Analytics**: View placement trends and reporting metrics
+
+---
+
+## 🛠️ Technical Stack
+
+- **Frontend**: React  
+- **Backend**: Node.js / Express.js  
+- **Database**: MongoDB   
+- **AI Components**:
+  - Career Chatbot
+  - Resume Parsing and Recommendations
+  - Resume Builder
+  - Mock Interview
+  - Resume Sorting(for Recruiters)
+- **Authentication**: JWT 
+
+---
+
+## 🧩 Installation
+
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/yourusername/placement-portal.git
+   als git clone the backend folder from the Ai-Powered-Placement-Cell-Backend repo
+   cd placement-portal
+   npm install
+   use --legacy-peer-deps for some packages as some packages are of older version
+   npm start for frontend
+   npm run dev for backend
+   ```
+
+   🔧 Configuration
+Create a .env file based on .env.example. Fill in the following:
+
+DB_URI: MongoDB use your atlas cluster credential
+
+JWT_SECRET: JWT signing secret
+
+AI_API_KEY: API key for AI services ( Groq cloud Api) apikey is in the frontend folder apikey form but you can shift it to the backend for better security
+
+▶️ Usage
+Open the app at http://localhost:3000
+
+Register as a Student, Recruiter,
+And For admin directly add a credential in database
+
+Explore dashboards, apply for jobs, or manage postings based on your role
+
+
+ Screenshots
+🎓 Student Dashboard
+![5](https://github.com/user-attachments/assets/16563da9-8ecd-42bc-804f-bdfe93d7a5aa)
+
+🏢 Recruiter View
+![12](https://github.com/user-attachments/assets/c3b7ac7d-9c4b-4b81-bee3-b516c5d24831)
+
+
+📄 Admin View
+![15](https://github.com/user-attachments/assets/19be1371-9394-466a-a588-b3586180d617)
+
+
+  
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
